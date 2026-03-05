@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 6.0
+
+  pre_build:
+    commands:
+      - echo Restoring dependencies
+      - dotnet restore sample-api
+
+  build:
+    commands:
+      - echo Building project
+      - dotnet publish sample-api -c Release -o publish
+
+  post_build:
+    commands:
+      - echo Build completed
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: publish
