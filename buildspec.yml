@@ -1,16 +1,16 @@
 version: 0.2
 
 phases:
-
   install:
     runtime-versions:
       dotnet: 6.0
 
   pre_build:
     commands:
-      - echo "Listing repo files"
+      - echo "Listing files"
+      - pwd
       - ls -R
-      - echo "Restoring dependencies"
+      - dotnet --version
       - dotnet restore
 
   build:
