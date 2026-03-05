@@ -7,10 +7,7 @@ phases:
 
   pre_build:
     commands:
-      - echo "Listing files"
-      - pwd
-      - ls -R
-      - dotnet --version
+      - cd sample-api
       - dotnet restore
 
   build:
@@ -20,4 +17,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: publish
+  base-directory: sample-api/publish
