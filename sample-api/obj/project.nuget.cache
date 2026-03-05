@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "bxz4gMhDmfA=",
+  "success": true,
+  "projectFilePath": "/home/ubuntu/assignment1/my-dotnet-api-repo/sample-api/sample-api.csproj",
+  "expectedPackageFiles": [
+    "/home/ubuntu/.nuget/packages/microsoft.aspnetcore.openapi/10.0.3/microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
+    "/home/ubuntu/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
