@@ -8,17 +8,14 @@ phases:
 
   pre_build:
     commands:
-      - echo Restoring dependencies
+      - echo "Listing repo files"
+      - ls -R
+      - echo "Restoring dependencies"
       - dotnet restore
 
   build:
     commands:
-      - echo Building project
       - dotnet publish -c Release -o publish
-
-  post_build:
-    commands:
-      - echo Build completed
 
 artifacts:
   files:
