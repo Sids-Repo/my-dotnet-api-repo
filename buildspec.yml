@@ -13,15 +13,8 @@ phases:
 
   build:
     commands:
-      - echo "Publishing application"
-      - dotnet publish -c Release -o publish
-
-  post_build:
-    commands:
-      - echo "Preparing artifacts for CodeDeploy"
-      - cd ..
-      - cp -r sample-api/publish/* .
-      - ls -la
+      - echo "Publishing application to repo root"
+      - dotnet publish -c Release -o ..
 
 artifacts:
   files:
