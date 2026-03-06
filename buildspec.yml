@@ -7,14 +7,23 @@ phases:
 
   pre_build:
     commands:
+      - echo "Restoring dependencies"
       - cd sample-api
       - dotnet restore
 
   build:
     commands:
+      - echo "Publishing application"
       - dotnet publish -c Release -o publish
+
+  post_build:
+    commands:
+      - echo "Preparing artifacts for CodeDeploy"
+      - cd ..
+      - cp -r sample-api/publish/* .
+      - ls -la
 
 artifacts:
   files:
     - '**/*'
-  base-directory: sample-api/publish
+  discard-paths: no
